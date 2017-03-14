@@ -1,0 +1,27 @@
+<header>
+ <div> {{title}} </div>
+  <button (click)="toggleState()"> Click Me </button>
+  <button (click)="toggleStater()"> Click Me R</button>
+  <button (click)="toggleState2()"> Click Me 2 </button>
+  <button (click)="animationDone()"> Click Me stop </button>
+  <button (click)="toggleState3()"> Click Me 3 </button>
+  <button (click)="toggleState4()"> Click Me 4 </button>
+ <!-- <div *ngIf="contents!=null"> {{contents}} </div> -->
+</header>
+     <!-- <div [@heroState]="hero" style="width: 100px; height: 100px; position: absolute; background:#eeeeee" > -->
+      <div [@heroState]="hero">
+        <div style="color:blue;">
+           回転して登場
+        </div>
+      </div>
+     <div 
+     (@heroState.done)="animationDone()"
+      [@heroState]="hero2">
+        <div style="color:blue;word-break: break-all;">
+           {{dispString}}
+        </div>
+      </div>
+<section id="main">
+  <app-home #view1 ></app-home>
+  <app-home #view2 ></app-home>
+</section> 
